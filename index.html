@@ -17,18 +17,13 @@
     </style>
     <script>
       var var_user_2 = false
-      function user_2() {
-        var_user_2 = true
-        document.write('<span class="name"><a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침">나무위키:기본방침/이용자 관리 방침</a>의 <a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침#편집권 남용">2. 편집권 남용</a></span>'.bold()+'<hr style="height: 1px; background-color: #999999; border: none;" /><ul>'편집권 남용'이란 편집권을 문서를 훼손하기 위한 목적으로나 규정에 위배되도록 남용하여 원활한 문서 작성에 피해를 주는 행위를 말한다. 다음 행위들은 편집권 남용에 포함된다.</ul>');
-      }
-      function user_2_1(event) {
-        if (event.target.checked) {
-          if (event.target.value.indexOf("user_2") !=-1) {
-            if (var_user_2 == false) user 2();
-          }
-          if (event.target.value == "user_2_1") document.write('  <ul>문서를 훼손하기 위한 목적의 편집. 이는 다음 행위를 포함한다.</ul');
-          if (event.target.value == "user_2_2") document.write('  <ul>나무위키의 규정에 위배되는 편집</ul>');
+      function user_2(event) {
+        if (var_user_2 == false) {
+          var_user_2 = true
+          document.write('<span class="name"><a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침">나무위키:기본방침/이용자 관리 방침</a>의 <a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침#편집권 남용">2. 편집권 남용</a></span>'.bold()+'<hr style="height: 1px; background-color: #999999; border: none;" /><ul>'편집권 남용'이란 편집권을 문서를 훼손하기 위한 목적으로나 규정에 위배되도록 남용하여 원활한 문서 작성에 피해를 주는 행위를 말한다. 다음 행위들은 편집권 남용에 포함된다.</ul>');
         }
+        if (event.target.value == "user_2_1") document.getElementById('result').innerText = '  <ul>문서를 훼손하기 위한 목적의 편집. 이는 다음 행위를 포함한다.</ul';
+        if (event.target.value == "user_2_2") document.getElementById('result').innerText = '  <ul>나무위키의 규정에 위배되는 편집</ul>';
       }
     </script>
 </head>
