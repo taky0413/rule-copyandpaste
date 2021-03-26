@@ -16,7 +16,15 @@
       .name{font-size:1.28889em; font-weight:bold;}
     </style>
     <script>
-      document.write('<span class="name"><a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침">나무위키:기본방침/이용자 관리 방침</a>의 <a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침#편집권 남용">2. 편집권 남용</a></span>'.bold()+'<hr style="height: 1px; background-color: #999999; border: none;" />asdf');
+      var var_user_2 = false
+      function user_2() {
+        var_user_2 = true
+        document.write('<span class="name"><a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침">나무위키:기본방침/이용자 관리 방침</a>의 <a href="https://namu.wiki/w/나무위키:기본방침/이용자 관리 방침#편집권 남용">2. 편집권 남용</a></span>'.bold()+'<hr style="height: 1px; background-color: #999999; border: none;" /><ul>'편집권 남용'이란 편집권을 문서를 훼손하기 위한 목적으로나 규정에 위배되도록 남용하여 원활한 문서 작성에 피해를 주는 행위를 말한다. 다음 행위들은 편집권 남용에 포함된다.</ul>');
+      }
+      function user_2_1(event) {
+        if(var_user_2 == false) user_2();
+        document.write('  <ul>문서를 훼손하기 위한 목적의 편집. 이는 다음 행위를 포함한다.</ul');
+      }
     </script>
 </head>
 <body>
@@ -25,7 +33,7 @@
       <p>이용자 관리 방침 - 편집권 남용</p>
       <label><input type="checkbox" name="user" value="2:1">편집권 남용 - 문서 훼손</label>
       <label><input type="checkbox" name="user" value="2:2">편집권 남용 - 규정 위반</label>
-      <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+      <p><input type="submit" value="Submit" onClicked="result(event)> <input type="reset" value="Reset"></p>
     </form>
 </body>
 </html>
